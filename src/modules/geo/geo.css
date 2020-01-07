@@ -1,0 +1,6 @@
+.geolocation {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

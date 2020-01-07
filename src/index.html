@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Daily Weather by LostAngeles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="container">
+        <div class="header dark" id="header">
+            <div class="logo">
+                <a href="/">
+                    <h1>Daily Weather</h1>
+                </a>
+            </div>
+            <button class="settings-button" id="settings-button">
+                <span id="settings-button-label">Settings</span>
+                <i class="fas fa-ellipsis-v settings-icon"></i>
+            </button>
+        </div>
+        <div class="settings dark" id="settings">
+            <div class="settings-section">
+                <i class="fas fa-redo-alt"></i>
+                <button class="action" id="background-change">
+                    <span id="background-change-label">Change background</span id="background-change-label">
+                </button>
+            </div>
+            <div class="settings-section">
+                <i class="fas fa-language"></i>
+                <button class="active action" id="lang-en"><span>EN</span></button>
+                <button class="action" id="lang-be"><span id="lang-be-label">BE</span id="lang-be"></button
+                    class="action">
+                <button class="action" id="lang-ru"><span id="lang-ru-label">RU</span id="lang-ru"></button
+                    class="action">
+            </div>
+            <div class="settings-section">
+                <i class="fas fa-temperature-low"></i>
+                <button class="action" id="fahrenheit"><span id="fahrenheit-label">Fahrenheit (F)</span
+                        id="fahrenheit"></button class="action">
+                <button class="active action" id="celsius"><span id="celsius-label">Celsius (C)</span
+                        id="celsius"></button>
+            </div>
+            <div class="settings-section">
+                <i class="fas fa-palette"></i>
+                <button class="active action" id="dark-mode"><span id="dark-mode-label">Dark</span
+                        id="dark-mode"></button>
+                <button class="action" id="light-mode"><span id="light-mode-label">Light</span id="light-mode"></button
+                    class="action">
+            </div>
+        </div>
+    </header>
+    <section class="container content">
+        <div class="widgets">
+            <div class="weather widget dark" id="weather-forecast-side">
+                <h2 class="widget-title" id="weather-title">Hello!</h2>
+                <div class="weather-row">
+                    <div class="weather-info">
+                        <p id="timezone-section">LostAngeles</p>
+                        <p id="current-date">Tuesday</p>
+                        <p id="current-time">03:00AM</p>
+                        <p class="weather-info-item">
+                            <span id="apparentTemperature-section">App. Temp.</span>
+                            <span id="apparentTemperature-section-value"></span>
+                        </p>
+                        <p class="weather-info-item">
+                            <span id="humidity-section">Humidity</span>
+                            <span id="humidity-section-value">Humidity</span>
+                        </p>
+                        <p class="weather-info-item">
+                            <span id="windSpeed-section">Wind Speed</span>
+                            <span id="windSpeed-section-value">Wind Speed</span>
+                        </p>
+                    </div>
+                    <div class="weather-info weather-info-align">
+                        <p class="weather-info-description weather-info-temp" id="temperature-section"></p>
+                        <p class="weather-info-description" id="summary-section"></p>
+                    </div>
+                    <div class="weather-info weather-info-align">
+                        <canvas class="today-icon" id="today-icon" width="128" height="128"></canvas>
+                    </div>
+                </div>
+                <div class="weather-row">
+                    <div class="weather-info weather-info-align" id="first-day">
+                        <p class="weather-info-description" id="first-day-title"></p>
+                        <p class="weather-info-description weather-info-temp" id="first-day-average-temp"></p>
+                        <canvas id="first-day-icon" width="128" height="128"></canvas>
+                    </div>
+                    <div class="weather-info weather-info-align" id="second-day">
+                        <p class="weather-info-description" id="second-day-title"></p>
+                        <p class="weather-info-description weather-info-temp" id="second-day-average-temp"></p>
+                        <canvas id="second-day-icon" width="128" height="128"></canvas>
+                    </div>
+                    <div class="weather-info weather-info-align" id="third-day">
+                        <p class="weather-info-description" id="third-day-title"></p>
+                        <p class="weather-info-description weather-info-temp" id="third-day-average-temp"></p>
+                        <canvas id="third-day-icon" width="128" height="128"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="widget geolocation dark" id="geolocation-side">
+                <h2 class="widget-title" id="titleGeo">Geolocation</h2>
+                <form class="search-form" id="search-form">
+                    <input class="search-form-box" type="search" placeholder="Start searching..."
+                        id="search-form-box" />
+                    <button class="search-form-button" type="submit" id="search-form-button">
+                        <i class="fas fa-search-location city-search-icon" id="city-search-icon"></i>
+                    </button>
+                </form>
+                <p class="coords">
+                    <span id="latitude-section"></span>
+                    <span id="longitude-section"></span>
+                </p>
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+	"name": "weatherapp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --mode=production",
+		"start": "webpack-dev-server",
+		"lint": "eslint --ext .js src/",
+		"lint-fix": "eslint --fix src/**/*.js",
+		"prettier": "prettier --write src/**/*.js",
+		"styleit": "stylelint src/**/*.css",
+		"styleit-fix": "stylelint src/**/*.css --fix",
+		"all-fix": "npm run prettier && npm run styleit-fix && npm run lint-fix"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.7.5",
+		"@babel/preset-env": "^7.7.6",
+		"babel": "^6.23.0",
+		"babel-loader": "^8.0.6",
+		"copy-webpack-plugin": "^5.1.0",
+		"css-loader": "^3.3.0",
+		"eslint": "^6.7.2",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-config-prettier": "^6.7.0",
+		"eslint-plugin-import": "^2.19.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.1",
+		"eslint-plugin-react": "^7.17.0",
+		"file-loader": "^5.0.2",
+		"html-webpack-plugin": "^3.2.0",
+		"husky": "^3.1.0",
+		"lint-staged": "^9.5.0",
+		"mini-css-extract-plugin": "^0.8.0",
+		"prettier": "1.19.1",
+		"stylelint": "^12.0.0",
+		"stylelint-config-airbnb": "0.0.0",
+		"stylelint-order": "^3.1.1",
+		"stylelint-scss": "^3.13.0",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.9.0"
+	},
+	"dependencies": {
+		"mapbox-gl": "^1.6.1",
+		"skycons": "^1.0.0"
+	}
+}

@@ -1,0 +1,39 @@
+.settings.open {
+    height: 20px;
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+.settings {
+    overflow: hidden;
+    height: 0px;
+    transition: 0.2s;
+    display: flex;
+    justify-content: space-around;
+}
+
+.settings-section {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.action:hover {
+    color: #ec7063;
+}
+
+.action span {
+    font-size: 14px;
+}
+
+.action:active span {
+    position: relative;
+    color: #ec7063;
+    top: 2px;
+    left: 2px;
+}
+
+.active {
+    color: #ec7063;
+}

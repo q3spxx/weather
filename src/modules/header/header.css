@@ -1,0 +1,9 @@
+.header {
+    padding: 12px 0px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.logo {
+    margin-left: 22px;
+}

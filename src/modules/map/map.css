@@ -1,0 +1,13 @@
+.coords {
+    margin-top: 18px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.map {
+    margin-top: 12px;
+    width: 100%;
+    height: 300px;
+}

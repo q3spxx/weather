@@ -1,0 +1,15 @@
+.dark {
+    color: white;
+    background-color: rgba(75, 68, 83, 0.7);
+}
+.dark:hover {
+    background-color: rgba(75, 68, 83, 0.9);
+}
+
+.light {
+    color: black;
+    background-color: rgba(236, 240, 241, 0.7);
+}
+.light:hover {
+    background-color: rgba(236, 240, 241, 0.9);
+}

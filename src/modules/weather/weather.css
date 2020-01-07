@@ -1,0 +1,35 @@
+.weather {
+    width: 64%;
+}
+
+.weather-row {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-info {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-info-item {
+    display: flex;
+    justify-content: space-between;
+}
+.weather-info-align {
+    align-items: center;
+}
+.weather-info-temp {
+    font-size: 50px;
+}
+
+.weather-info-description {
+    text-align: center;
+}
+
+#temperature-section {
+    font-size: 70px;
+}
